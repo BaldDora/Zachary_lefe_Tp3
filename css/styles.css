@@ -1,58 +1,109 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #e50808;
 }
 
-h1,h2,h3,h5,h6{
+header {
+    background-color: #e50808;
+    padding-top: 2rem;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
     line-height: 8rem;
 }
 
-h2,h3,h4,h5,h6{
-    font-size: 50px ;
-    color:#ffffff;
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 50px;
+    color: #ffffff;
     margin-right: 10rem;
 }
-h3{
+
+h3 {
     text-decoration: underline;
     font-size: 40px;
 }
-h4{
+
+h4 {
     margin-left: 10rem;
     font-size: 30px;
 }
 
-.container{
+.container {
     width: 90%;
     max-width: 1200px;
-    margin:0 auto;
-}
-.hero{
-    width: 100%;
-    height: 850px;
-    border-radius: 2rem;
+    margin: 0 auto;
 }
 
-header {
-    margin-top: 2rem;
+.hero {
+    width: 100%;
+    max-height: 600px;
+    border-radius: 2rem;
+    object-fit: cover;
 }
-ul li{
+
+ul li {
     display: inline-block;
 }
-.aligneHeader{
+
+.aligneHeader {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .lienUnit {
-	width: 30%;
-	border-radius: 0.5rem;
-	font-size: 20px;
+    width: 30%;
+    border-radius: 0.5rem;
+    font-size: 20px;
     background-color: aqua;
-	text-decoration: none;
-	color: #000000;
+    text-decoration: none;
+    color: #000000;
+    margin-left: 1rem
 }
+
 .pagePresente {
-	border: solid 5px #1a191c;
+    border: solid 5px #1a191c;
+}
+
+.grid img,
+.grid video {
+
+    padding: 20px 50px;
+    max-width: 300px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:1fr 1fr 1fr;
+    gap: 10px;
+    list-style-type: none;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.couloeur1{
+    background-color: rgb(83, 16, 3);
+}
+.couloeur2{
+    background-color: rgb(3, 83, 10);
+}
+.couloeur3{
+    background-color: rgb(3, 90, 94);
+}
+
+@media screen and (max-width: 1080px) {
+
+    header {
+        background-color: rgb(43, 0, 200);
+    }
 }
 
 footer {
