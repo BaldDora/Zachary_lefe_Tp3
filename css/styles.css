@@ -3,7 +3,7 @@ body {
 }
 
 header {
-    background-color: #e50808;
+    background-color: #6a6a6a;
     padding-top: 2rem;
 }
 
@@ -23,6 +23,12 @@ h6 {
     font-size: 50px;
     color: #ffffff;
     margin-right: 10rem;
+}
+h1{
+    background-color: #000000;
+    color: #fff;
+    font-size: 5rem;
+    text-align: center;
 }
 
 h3 {
@@ -62,7 +68,7 @@ ul li {
     width: 30%;
     border-radius: 0.5rem;
     font-size: 20px;
-    background-color: aqua;
+    background-color: rgb(65, 102, 158);
     text-decoration: none;
     color: #000000;
     margin-left: 1rem
@@ -72,37 +78,71 @@ ul li {
     border: solid 5px #1a191c;
 }
 
-.grid img,
-.grid video {
-
-    padding: 20px 50px;
-    max-width: 300px;
-}
-
 .grid {
     display: grid;
-    grid-template-columns:1fr 1fr 1fr;
-    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 7px;
     list-style-type: none;
     width: 100%;
     object-fit: cover;
     object-position: center;
 }
+.slogan{
+    margin-left: 40px;
+    background-color: rgb(65, 102, 158);
+    max-width: 1065px;
+    height: 150px;
+    font-size: 4rem;
+}
 
+.imgVid {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.imgPlusGrande{
+    grid: span 2;
+    max-width: 800px;
+    height: auto;
+    display: block;
+}
 .couloeur1{
+    max-width: 300px;
     background-color: rgb(83, 16, 3);
 }
 .couloeur2{
+    max-width: 300px;
     background-color: rgb(3, 83, 10);
 }
 .couloeur3{
+    max-width: 300px;
     background-color: rgb(3, 90, 94);
 }
+.couloeur4{
+    max-width: 60px;
+    margin-top: 7px;
+    border: 120px solid rgb(1, 1, 113);
+}
+.couloeur5{
+    max-width: 230px;
+    margin-top: 7px;
+    border: 35px solid rgb(113, 1, 81);
+}
+.couloeur6{
+    max-width: 300px;
+    background-color: rgb(83, 16, 3);
+}
+
 
 @media screen and (max-width: 1080px) {
 
     header {
-        background-color: rgb(43, 0, 200);
+        background-color: rgb(19, 0, 88);
+    }
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
