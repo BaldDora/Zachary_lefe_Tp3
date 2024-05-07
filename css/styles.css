@@ -81,7 +81,6 @@ ul li {
 /* acceuil */
 .grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 7px;
     list-style-type: none;
     object-position: center;
@@ -124,7 +123,6 @@ ul li {
 .catalogueGrid{
     max-width: 100%;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
     gap: 2px;
     list-style-type: none;
     object-position: center;
@@ -135,6 +133,7 @@ ul li {
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     object-fit: cover;
+    text-align: center;
 }
 .catImgVid{
     width: 100%;
@@ -142,13 +141,37 @@ ul li {
 figure{
     width: 250px;
 }
-@media screen and (max-width: 1080px) {
+@media screen and (min-width: 1200px) {
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .catalogueGrid{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media screen and (max-width: 1199px) and (min-width:1080px) {
 
     header {
         background-color: rgb(19, 0, 88);
     }
     .grid{
         grid-template-columns: repeat(2, 1fr);
+    }
+    .catalogueGrid{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@media screen and (max-width: 1079px) and (min-width:850px){
+    .grid{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .catalogueGrid{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 600px){
+    .catalogueGrid{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
