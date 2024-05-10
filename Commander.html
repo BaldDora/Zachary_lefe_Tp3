@@ -11,6 +11,7 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
+
 <body>
 	<header>
 		<div class="container aligneHeader">
@@ -24,49 +25,28 @@
 				<li> <a class="lienUnit" href="Panier.html">Panier</a></li>
 			</ul>
 		</div>
-		<div>
-			<video src="img\medias\drone.mp4" class="hero" autoplay muted loop>
-		</div>
 	</header>
+	<section class="formulaire">
+		<form action="/process_commande.php" method="post">
+			<label for="nom">Nom complet :</label>
+			<input type="text" id="nom" name="nom" required>
 
-	<section class="background-image1">
-		<div class="container">
-			<div class='banniere'>
-				<h2>Nos meilleurs forfaits pour nos meilleurs clients</h2>
-			</div>
-		</div>
-	</section>
+			<label for="email">Adresse email :</label>
+			<input type="email" id="email" name="email" required>
 
+			<label for="adresse">Adresse de livraison :</label>
+			<textarea id="adresse" name="adresse" rows="4" required></textarea>
 
-	<section>
-		<div class="container">
-			<h1> Nos Forfait </h1>
-			 <table>
-				<head>
-					<tr>
-						<th class="caseVide1"></th>
-						<th class="th-forfait">Forfait 1</th>
-						<th class="th-forfait">Forfait 2</th>
-						<th class="th-forfait">Forfait 3</th>
-						<th class="th-forfait">Forfait 4</th>
-					</tr>
-				</head>
-				<body>
+			<label for="ville">Ville :</label>
+			<input type="text" id="ville" name="ville" required>
 
-				</body>
-				<foot>
-					<tr>
-						<th>Acheter</th>
-						<td><a class="boutonForfait" href="Alchoolique anonyme.html">Acheter Forfait 1</a></td>
-						<td><a class="boutonForfait" href="Alchoolique anonyme.html">Acheter Forfait 2</a></td>
-						<td><a class="boutonForfait" href="Alchoolique anonyme.html">Acheter Forfait 3</a></td>
-						<td><a class="boutonForfait" href="Alchoolique anonyme.html">Acheter Forfait 4</a></td>
-					</tr>
-				</foot>
+			<label for="code_postal">Code postal :</label>
+			<input type="text" id="code_postal" name="code_postal" required>
 
+			<label for="pays">Pays :</label>
 
-			 </table>
-		</div>
+			<button type="submit">Passer la commande</button>
+		</form>
 	</section>
 
 	<footer>
@@ -78,7 +58,6 @@
 
 		</div>
 	</footer>
-
 
 </body>
 
