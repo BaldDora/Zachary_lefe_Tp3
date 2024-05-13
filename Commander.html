@@ -25,30 +25,61 @@
 				<li> <a class="lienUnit" href="Panier.html">Panier</a></li>
 			</ul>
 		</div>
+		<h1>Passer votre command</h1>
 	</header>
-	<section class="formulaire">
-		<form action="/process_commande.php" method="post">
-			<label for="nom">Nom complet :</label>
-			<input type="text" id="nom" name="nom" required>
+	<form action="/process_commande.php" method="post">
+		<label for="nom">Nom complet :</label>
+		<input type="text" id="nom" name="nom" required>
 
-			<label for="email">Adresse email :</label>
-			<input type="email" id="email" name="email" required>
+		<label for="telephone">Numéro de téléphone :</label>
+		<input type="tel" id="telephone" name="telephone" required>
 
-			<label for="adresse">Adresse de livraison :</label>
-			<textarea id="adresse" name="adresse" rows="4" required></textarea>
+		<label>Mode de confirmation :</label>
+		<input type="checkbox" id="confirmation_appel" name="confirmation" value="appel">
+		<label for="confirmation_appel">Appel téléphonique</label>
+		<input type="checkbox" id="confirmation_texto" name="confirmation" value="texto">
+		<label for="confirmation_texto">Texto</label>
+		<input type="checkbox" id="confirmation_courriel" name="confirmation" value="courriel">
+		<label for="email">Adresse email :</label>
+		<input type="email" id="email" name="email" required>
 
-			<label for="ville">Ville :</label>
-			<input type="text" id="ville" name="ville" required>
+		<label for="participants">Nombre de participants (1-4) :</label>
+		<input type="number" id="participants" name="participants" min="1" max="4" required>
 
-			<label for="code_postal">Code postal :</label>
-			<input type="text" id="code_postal" name="code_postal" required>
+		<label for="adresse_lieu">Adresse du lieu de rencontre :</label>
+		<input type="text" id="adresse_lieu" name="adresse_lieu" required>
+		<input type="text" id="suite_appartement" name="suite_appartement"
+			placeholder="Suite ou appartement (optionnel)">
 
-			<label for="pays">Pays :</label>
+			<!-- juste pour skiper une place du grid -->
+		<label></label>
 
-			<button type="submit">Passer la commande</button>
-		</form>
+		<label for="ville_lieu">Ville :</label>
+		<input type="text" id="ville_lieu" name="ville_lieu" required>
+
+		<label for="heure_seance">Heure de la séance souhaitée :</label>
+		<select id="heure_seance" name="heure_seance" required>
+			<option value="">Sélectionnez l'heure</option>
+			<option value="9h30-12h">9 h 30 à 12 h 00</option>
+			<option value="13h30-16h">13 h 30 à 16 h 00</option>
+			<option value="19h30-21h">19 h 30 à 21 h 00</option>
+			<option value="21h30-0h">21 h 30 à 00 h 00</option>
+		</select>
+
+		<label for="commentaire">Commentaire supplémentaire :</label>
+		<textarea id="commentaire" name="commentaire" rows="4"></textarea>
+
+		<label for="infolettre">S'inscrire à l'infolettre</label>
+		<input type="checkbox" id="infolettre" name="infolettre" value="oui">
+
+		<button type="submit" href="Catalogue.html"> Confirmation de votre commande</button>
+	</form>
 	</section>
 
+	<section class="concour">
+		<video class="vidConcour" src="img/medias/ocean.mp4" autoplay muted loop></video>
+		<a class="concourPara" href="Panier.html"><h2>Concour</h2><p>Gagner une chance de devenir pilote de drone</p></a>
+	</section>
 	<footer>
 		<div class="container colone">
 
