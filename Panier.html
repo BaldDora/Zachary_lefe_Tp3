@@ -21,18 +21,55 @@
             </a>
             <ul>
                 <li> <a class="lienUnit" href="index.html">Accueil</a></li>
-                <li> <a class="lienUnit pagePresente" href="Catalogue.html">Catalogue</a></li>
+                <li> <a class="lienUnit" href="Catalogue.html">Catalogue</a></li>
                 <li> <a class="lienUnit" href="Commander.html">Commander</a></li>
-                <li> <a class="lienUnit" href="Panier.html">Panier</a></li>
+                <li> <a class="lienUnit pagePresente" href="Panier.html">Panier</a></li>
             </ul>
         </div>
-        <h1>LE Jagermeister</h1>
+        <h1>Votre Panier</h1>
     </header>
 
+    <body>    
+        <!-- Traitement côté serveur pour ajouter au panier -->
+        <?php
+        // Vérifier si des données sont soumises via POST
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // Récupérer l'identifiant de l'article depuis le formulaire
+            $article_id = $_POST["article_id"];
+    
+            // Vous pouvez ajouter ici la logique pour ajouter l'article au panier
+            // Par exemple, en utilisant PHP pour stocker l'article dans une session
+            // ou l'ajouter à une base de données
+            // Exemple basique :
+            session_start();
+            $_SESSION["panier"][$article_id] = true;
+            echo "<p>L'article a été ajouté au panier.</p>";
+        }
+        ?>
+    
+        <!-- Contenu du panier -->
+        <p>Votre panier contient :</p>
+        <ul>
+            <!-- Ici vous pouvez afficher les articles ajoutés au panier -->
+            <?php
+            // Exemple : Afficher les articles ajoutés à la session
+            if (isset($_SESSION["panier"])) {
+                foreach ($_SESSION["panier"] as $id => $value) {
+                    echo "<li>Article ID: $id</li>";
+                }
+            }
+            ?>
+        </ul>
+    </body>
+
+    <section class="concour">
+		<video class="vidConcour" src="img/medias/ocean.mp4" autoplay muted loop></video>
+		<a class="concourPara" href="Panier.html"><h2>Concour</h2><p>Gagner une chance de devenir pilote de drone</p></a>
+	</section>
 	<footer>
 		<div class="container colone">
 
-			<p> Site intégré par Tomas Renaud Mejia et Zachary Lefebvre</p>
+			<p> Site intégré par Zachary Lefebvre</p>
 
 			<p>Dans le cadre du programme Technique de l'informatique - Cégep Garneau</p>
 

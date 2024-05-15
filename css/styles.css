@@ -38,8 +38,8 @@ h2 {
 }
 
 h4 {
-    margin-left: 10rem;
     font-size: 30px;
+    text-align: center;
 }
 
 .container {
@@ -160,6 +160,11 @@ ul li {
     width: 250px;
 }
 
+.boutCat {
+    width: 57%;
+    border-radius: 0.5rem;
+    color: #000000;
+}
 
 /* commande */
 form {
