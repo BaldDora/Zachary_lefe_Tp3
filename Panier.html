@@ -4,8 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jagermeister</title>
-    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <title>Panier</title>
+    <link rel="shortcut icon" href="img/logo-petit-transp.png" type="image/x-icon">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,52 +29,57 @@
         <h1>Votre Panier</h1>
     </header>
 
-    <body>    
-        <!-- Traitement côté serveur pour ajouter au panier -->
-        <?php
-        // Vérifier si des données sont soumises via POST
-        if ($_SERVER["REQUEST_METHOD"] == "POST") {
-            // Récupérer l'identifiant de l'article depuis le formulaire
-            $article_id = $_POST["article_id"];
-    
-            // Vous pouvez ajouter ici la logique pour ajouter l'article au panier
-            // Par exemple, en utilisant PHP pour stocker l'article dans une session
-            // ou l'ajouter à une base de données
-            // Exemple basique :
-            session_start();
-            $_SESSION["panier"][$article_id] = true;
-            echo "<p>L'article a été ajouté au panier.</p>";
-        }
-        ?>
-    
-        <!-- Contenu du panier -->
-        <p>Votre panier contient :</p>
-        <ul>
-            <!-- Ici vous pouvez afficher les articles ajoutés au panier -->
-            <?php
-            // Exemple : Afficher les articles ajoutés à la session
-            if (isset($_SESSION["panier"])) {
-                foreach ($_SESSION["panier"] as $id => $value) {
-                    echo "<li>Article ID: $id</li>";
-                }
-            }
-            ?>
-        </ul>
-    </body>
+    <section class="container panierForm">
+        <table class="textPanier">
+            <tr>
+                <th>Produit</th>
+                <th>Prix unitaire</th>
+                <th>Quantité</th>
+                <th>Total</th>
+            </tr>
+            <tr>
+                <td>Produit 1 :</td>
+                <td>19.99 €</td>
+                <td>2</td>
+                <td>39.98 €</td>
+            </tr>
+            <tr>
+                <td>Produit 2 :</td>
+                <td>24.99 €</td>
+                <td>1</td>
+                <td>24.99 €</td>
+            </tr>
+            <!-- Ajoutez plus de lignes pour d'autres produits -->
+
+            <tr class="total">
+                <td colspan="3">Total</td>
+                <td>64.97 €</td>
+            </tr>
+        </table>
+
+        <p class="achats">
+            <a href="catalogue.html">Continuer vos achats</a><br>
+            <a href="checkout.html">Passer à la caisse</a>
+        </p>
+
+    </section>
 
     <section class="concour">
-		<video class="vidConcour" src="img/medias/ocean.mp4" autoplay muted loop></video>
-		<a class="concourPara" href="Panier.html"><h2>Concour</h2><p>Gagner une chance de devenir pilote de drone</p></a>
-	</section>
-	<footer>
-		<div class="container colone">
+        <video class="vidConcour" src="img/medias/ocean.mp4" autoplay muted loop></video>
+        <a class="concourPara" href="Panier.html">
+            <h2>Concour</h2>
+            <p>Gagner une chance de devenir pilote de drone</p>
+        </a>
+    </section>
+    <footer>
+        <div class="container colone">
 
-			<p> Site intégré par Zachary Lefebvre</p>
+            <p> Site intégré par Zachary Lefebvre</p>
 
-			<p>Dans le cadre du programme Technique de l'informatique - Cégep Garneau</p>
+            <p>Dans le cadre du programme Technique de l'informatique - Cégep Garneau</p>
 
-		</div>
-	</footer>
+        </div>
+    </footer>
 </body>
 
 </html>
